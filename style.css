@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   padding-bottom: 100px;
 }
@@ -31,20 +31,21 @@ h1 {
 .filter {
   width: 100%;
   padding: 12px;
+  font-size: 16px;
 }
-
 .post {
   position: relative;
   background-color: #4992d3;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  display: flex;
   padding: 20px;
   margin: 40px 0;
+  display: flex;
+  width: 80vw;
   max-width: 800px;
 }
 
-.post .title {
+.post .post-title {
   margin: 0;
 }
 
@@ -59,17 +60,17 @@ h1 {
 
 .post .number {
   position: absolute;
-  left: -15px;
   top: -15px;
+  left: -15px;
   font-size: 15px;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  border-radius: 50%;
+  background: #fff;
   color: #296ca8;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   padding: 7px 10px;
 }
 
@@ -82,11 +83,11 @@ h1 {
 }
 
 .loader.show {
-  opacity: 1
+  opacity: 1;
 }
 
 .circle {
-  background: #fff;
+  background-color: #fff;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -94,13 +95,14 @@ h1 {
   animation: bounce 0.5s ease-in infinite;
 }
 
-.circle:nth-last-of-type(2) {
+.circle:nth-of-type(2) {
   animation-delay: 0.1s;
 }
 
 .circle:nth-of-type(3) {
   animation-delay: 0.2s;
 }
+
 
 @keyframes bounce {
   0%,
